@@ -1,0 +1,6 @@
+.firebase/
+firebase-debug.log
+node_modules/
+*.apk
+appstore/apks/
+.claude_memory/

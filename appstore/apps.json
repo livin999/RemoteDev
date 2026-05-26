@@ -1,0 +1,55 @@
+{
+  "updated": "2026-05-26T22:16:45Z",
+  "apps": [
+    {
+      "name": "Blind Hunter",
+      "slug": "blindhunter",
+      "version": "2.0.0",
+      "build": "2006",
+      "updated": "2026-05-26",
+      "notes": "chore: remove stale animal TODO comment; add privacy policy page",
+      "size": "64M",
+      "apk": "https://github.com/livin999/appstore/releases/download/blindhunter-latest/blindhunter-latest.apk"
+    },
+    {
+      "name": "Lisnr",
+      "slug": "lisnr",
+      "version": "1.0",
+      "build": "1",
+      "updated": "2026-05-26",
+      "notes": "feat: Play Store hardening \u2014 security, ProGuard, UX polish",
+      "size": "26M",
+      "apk": "https://github.com/livin999/appstore/releases/download/lisnr-latest/lisnr-latest.apk"
+    },
+    {
+      "name": "Network Angel",
+      "slug": "networkangel",
+      "version": "1.0.7",
+      "build": "8",
+      "updated": "2026-05-26",
+      "notes": "feat: add Play Store assets and update app description",
+      "size": "57M",
+      "apk": "https://github.com/livin999/appstore/releases/download/networkangel-latest/networkangel-latest.apk"
+    },
+    {
+      "name": "StarClash",
+      "slug": "starclash",
+      "version": "1.0.0",
+      "build": "1",
+      "updated": "2026-05-26",
+      "notes": "feat: replace static card chips with dynamic slider (1 to all cards)",
+      "size": "193M",
+      "apk": "https://github.com/livin999/appstore/releases/download/starclash-latest/starclash-latest.apk"
+    },
+    {
+      "name": "WoMe",
+      "slug": "wome",
+      "version": "1.0.2",
+      "build": "3",
+      "updated": "2026-05-26",
+      "notes": "fix: auth screen micro-polish \u2014 social proof font, period, gap",
+      "size": "168M",
+      "apk": "https://github.com/livin999/appstore/releases/download/wome-latest/wome-latest.apk"
+    }
+  ]
+}

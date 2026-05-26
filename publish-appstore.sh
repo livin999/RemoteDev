@@ -4,7 +4,7 @@
 #
 # APK → GitHub Release asset (github.com/livin999/appstore, tag: <slug>-latest)
 # Manifest → apps.json updated, then Firebase Hosting deployed (HTML + JSON only)
-# Page → https://wome-app.web.app
+# Page → https://remote-dev-store.web.app
 #
 # Usage:
 #   ./publish-appstore.sh               # auto-find newest APK
@@ -16,7 +16,7 @@
 set -euo pipefail
 
 APPSTORE_DIR="${APPSTORE_DIR:-$HOME/projects/dev/RemoteDev/appstore}"
-APPSTORE_PROJECT="wome-app"
+APPSTORE_PROJECT="remote-dev-store"
 GH_REPO="livin999/appstore"
 
 # Read GitHub token from creds file

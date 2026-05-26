@@ -4,7 +4,7 @@ Private app store infrastructure + cloud VM bootstrap for solo Android/Flutter d
 
 ## What this is
 
-- **`appstore/`** — the static site served at https://wome-app.web.app (Firebase Hosting). Lists all my apps with direct APK download links.
+- **`appstore/`** — the static site served at https://remote-dev-store.web.app (Firebase Hosting). Lists all my apps with direct APK download links.
 - **`publish-appstore.sh`** — canonical publish script. Copied into each project root; uploads the APK to GitHub Releases, updates `apps.json`, and redeploys the site.
 - **`setup-cloud-vm.sh`** — one-shot bootstrap for a fresh Ubuntu VM. Installs Flutter, Android SDK, Java 17, Node, Claude Code, Firebase CLI. Use on Oracle Cloud Ampere (free tier) to go laptop-free.
 

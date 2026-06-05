@@ -301,10 +301,19 @@
 
     function timeAgo(dateStr) {
       if (!dateStr) return '';
-      const d = new Date(dateStr.includes('T') ? dateStr : dateStr + 'T00:00:00Z');
-      const diff = Math.floor((Date.now() - d) / 1000);
-      if (diff < 3600)  return Math.floor(diff / 60) + 'm ago';
-      if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
+      const hasTime = dateStr.includes('T');
+      const d = new Date(hasTime ? dateStr : dateStr + 'T00:00:00Z');
+      if (isNaN(d.getTime())) return '';
+      // Date-only values carry no clock time, so any relative "Xh ago" would be
+      // misleading (it parses as midnight UTC, which is how a fresh publish ends
+      // up reading "14h ago"). Show the calendar date instead for those.
+      if (!hasTime) {
+        return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+      }
+      const diff = Math.floor((Date.now() - d.getTime()) / 1000);
+      if (diff < 60)     return 'just now';        // also covers minor clock skew
+      if (diff < 3600)   return Math.floor(diff / 60) + 'm ago';
+      if (diff < 86400)  return Math.floor(diff / 3600) + 'h ago';
       if (diff < 604800) return Math.floor(diff / 86400) + 'd ago';
       return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
     }
